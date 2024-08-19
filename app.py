@@ -1,4 +1,5 @@
 import streamlit as st
+from ai_itinerary import generate_itinerary
 
 st.title("AI Vacation Planner")
 
@@ -17,4 +18,7 @@ confirm_booking = st.checkbox("I allow the planner to make bookings on my behalf
 # Submit
 if st.button("Plan My Vacation"):
     # Trigger backend planning
+    itinerary = generate_itinerary(destination, budget, dates, activities)
     st.write("Planning your vacation...")
+    st.write("Here's your itinerary:")
+    st.write(itinerary)
