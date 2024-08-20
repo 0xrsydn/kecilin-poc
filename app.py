@@ -15,7 +15,7 @@ activities = st.text_area("Preferred Activities")
 
 # Payment Information
 st.subheader("Payment Information")
-card_number = st.text_input("Card Number", value="4242 4242 4242 4242")
+card_number = st.text_input("Card Number", value="4242 4242 4242 4242", type="password")
 expiry_date = st.text_input("Expiry Date (MM/YY)", value="12/34")
 cvc = st.text_input("CVC", value="123")
 
